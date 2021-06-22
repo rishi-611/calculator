@@ -1,16 +1,18 @@
 import React from "react";
 
-const Display = function (props) {
-  return (
-    <div className="display" id="display">
-      <div className="input" id="input">
-        0
+class Display extends React.Component {
+  render() {
+    return (
+      <div className="display" id="display">
+        <div className="input" id="input">
+          {this.props.input}
+        </div>
+        <div className="answer" id="answer">
+          {this.props.answer}
+        </div>
       </div>
-      <div className="answer" id="answer">
-        0
-      </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default Display;
